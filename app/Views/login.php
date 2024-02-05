@@ -30,24 +30,32 @@
                         </div>
                         <div class="form-group">
                             <label>Email ID</label>
-                            <input type="email" class="form-control" placeholder="Email Address">
+                            <input type="email" class="form-control" name="email" placeholder="Email Address">
                         </div>
                         <div class="form-group">
                             <label>Password</label>
-                            <input type="password" class="form-control" placeholder="Password">
+                            <input type="password" class="form-control" name="password" placeholder="Password">
                         </div>
                         <div class="form-group">
                             <label>Confirm Password</label>
-                            <input type="password" class="form-control" placeholder="Confirm Password">
+                            <input type="password" class="form-control" name="cpassword" placeholder="Confirm Password">
                         </div>
                         <h4 class="sub-title">Personal Information</h4>
                         <div class="form-group">
                             <label>Phone No.</label>
-                            <input type="text" class="form-control" placeholder="Phone Number">
+                            <input type="text" class="form-control" name="phone" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <label>first Name</label>
+                            <input type="text" class="form-control" name="firstname" placeholder="Firstname">
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" class="form-control" name="lastname" placeholder="Firstname">
                         </div>
                         <div class="form-group">
                             <label>City</label>
-                            <select class="form-control">
+                            <select class="form-control" name="city">
                                 <option value="paris">Paris</option>
                                 <option value="new york">New York</option>
                             </select>
