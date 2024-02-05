@@ -10,5 +10,7 @@ $routes->get('/', 'Home::index');
 // $routes->get('/users' , 'UserController::selectUsers');
 // $routes->post('/users/delete' , 'UserController::delete');
 // $routes->post('/users/update' , 'UserController::update');
-$routes->get('/login' , 'Home::login');
+$routes->get('/register' , 'Home::register');
 $routes->post('/register' , 'StudentController::register');
+
+$routes->get('/login' , 'Home::login');

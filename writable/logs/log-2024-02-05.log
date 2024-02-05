@@ -1,0 +1,18 @@
+CRITICAL - 2024-02-05 11:52:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('login')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->register()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-05 11:52:40 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('login')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->register()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
