@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --bg: #eff7f6;
+  --card-bg: #f7d6e0;
+  --pink: #f2b5d4;
+  --blue: #90e3f4;
+  --dark: #1d1d1d;
+  --button : #000675;
+}
+
+body {
+  background-color: var(--bg) !important;
+  font-family: "Poppins", sans-serif;
+}
+
+.border-none {
+  border-radius: 0px !important;
+}
