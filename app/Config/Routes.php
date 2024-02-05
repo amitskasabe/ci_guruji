@@ -14,3 +14,4 @@ $routes->get('/register' , 'Home::register');
 $routes->post('/register' , 'StudentController::register');
 
 $routes->get('/login' , 'Home::login');
+$routes->get('/contact' , 'Home::contact');
