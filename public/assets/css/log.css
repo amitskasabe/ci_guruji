@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #1873c9, #a5f12a);
+    margin-top: 10%;
+    width: 50%;
+    height: 360px;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    margin-left: 20%;
+}
+.form-control{
+    margin-top: 5px;
+
+}
+.button{
+    background: linear-gradient(to left, #e22020, #a5f12a);
+    color: white;
+    width: 30%;
+    height: 30%;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+   margin-left: 70px;
+}

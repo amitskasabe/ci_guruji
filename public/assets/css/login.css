@@ -42,7 +42,8 @@ body {
     width: 50%;
     padding: 0 8px;
     margin: 0 0 15px;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
 }
 .form-container .form-horizontal .form-group:nth-child(4){ margin-bottom: 30px; }
 .form-container .form-horizontal .form-group label{
@@ -56,6 +57,7 @@ body {
     letter-spacing: 1px;
     height: 40px;
     padding: 6px 12px;
+    width: 200%;
     border-radius: 10px;
     border: 2px solid #e7e7e7;
     box-shadow: none;
@@ -131,9 +133,17 @@ body {
 }
 .form-container .form-horizontal .btn:hover,
 .form-container .form-horizontal .btn:focus{
+    background-color: #00A9EF;
     text-shadow: 0 0 5px rgba(0,0,0,0.5);
     box-shadow: 3px 3px rgba(0,0,0,0.15),5px 5px rgba(0,0,0,0.1);
     outline: none;
+}
+.btn{
+    background-color: rgb(87, 87, 248)!important;
+    color: rgb(255, 255, 255)!important;
+    width: 95%!important;
+    border-radius: 15px!important;
+    margin-left: 5px!important;    
 }
 @media only screen and (max-width:479px){
     .form-container .form-horizontal .form-group{ width: 100%; }

@@ -16,3 +16,89 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
  5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
  6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-05 21:32:53 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'guruji' in C:\xampp\htdocs\guruji-classes\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\guruji-classes\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'guruji', 3306, '', 0)
+#1 C:\xampp\htdocs\guruji-classes\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\guruji-classes\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\guruji-classes\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\guruji-classes\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\guruji-classes\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\guruji-classes\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\guruji-classes\app\Controllers\StudentController.php(22): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\guruji-classes\system\CodeIgniter.php(941): App\Controllers\studentController->register()
+#9 C:\xampp\htdocs\guruji-classes\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\studentController))
+#10 C:\xampp\htdocs\guruji-classes\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\guruji-classes\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'guruji' in C:\xampp\htdocs\guruji-classes\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\guruji-classes\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\guruji-classes\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\guruji-classes\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#3 C:\xampp\htdocs\guruji-classes\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\xampp\htdocs\guruji-classes\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#5 C:\xampp\htdocs\guruji-classes\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#6 C:\xampp\htdocs\guruji-classes\app\Controllers\StudentController.php(22): CodeIgniter\Model->insert(Array)
+#7 C:\xampp\htdocs\guruji-classes\system\CodeIgniter.php(941): App\Controllers\studentController->register()
+#8 C:\xampp\htdocs\guruji-classes\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\studentController))
+#9 C:\xampp\htdocs\guruji-classes\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\guruji-classes\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-02-05 21:32:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'guruji'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`firstname`, `lastname`, `username`, `email`, `password`, `phone`, `city`, `created_at`, `updated_at`) VALUES (:firstname:, :lastname:, :username:, :email:, :password:, :phone:, :city:, :created_at:, :updated_at:)', [...], false)
+ 3 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 6 APPPATH\Controllers\StudentController.php(22): CodeIgniter\Model->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\studentController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\studentController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-05 21:32:53 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'guruji' in C:\xampp\htdocs\guruji-classes\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\guruji-classes\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'guruji', 3306, '', 0)
+#1 C:\xampp\htdocs\guruji-classes\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\guruji-classes\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\guruji-classes\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\guruji-classes\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\guruji-classes\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\guruji-classes\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\guruji-classes\app\Controllers\StudentController.php(22): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\guruji-classes\system\CodeIgniter.php(941): App\Controllers\studentController->register()
+#9 C:\xampp\htdocs\guruji-classes\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\studentController))
+#10 C:\xampp\htdocs\guruji-classes\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\guruji-classes\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'guruji' in C:\xampp\htdocs\guruji-classes\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\guruji-classes\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\guruji-classes\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\guruji-classes\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#3 C:\xampp\htdocs\guruji-classes\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\xampp\htdocs\guruji-classes\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#5 C:\xampp\htdocs\guruji-classes\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#6 C:\xampp\htdocs\guruji-classes\app\Controllers\StudentController.php(22): CodeIgniter\Model->insert(Array)
+#7 C:\xampp\htdocs\guruji-classes\system\CodeIgniter.php(941): App\Controllers\studentController->register()
+#8 C:\xampp\htdocs\guruji-classes\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\studentController))
+#9 C:\xampp\htdocs\guruji-classes\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\guruji-classes\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-02-05 21:32:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'guruji'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`firstname`, `lastname`, `username`, `email`, `password`, `phone`, `city`, `created_at`, `updated_at`) VALUES (:firstname:, :lastname:, :username:, :email:, :password:, :phone:, :city:, :created_at:, :updated_at:)', [...], false)
+ 3 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 6 APPPATH\Controllers\StudentController.php(22): CodeIgniter\Model->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\studentController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\studentController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
