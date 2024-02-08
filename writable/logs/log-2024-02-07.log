@@ -1,0 +1,15 @@
+CRITICAL - 2024-02-07 18:47:17 --> ArgumentCountError: Too few arguments to function App\Controllers\CourseController::math(), 0 passed in C:\server\htdocs\guruji-classes\system\CodeIgniter.php on line 941 and exactly 1 expected
+in APPPATH\Controllers\CourseController.php on line 7.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->math()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-07 18:50:01 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pages/course.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages/course.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/course', [], true)
+ 3 APPPATH\Controllers\CourseController.php(9): view('pages/course', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->math('java')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

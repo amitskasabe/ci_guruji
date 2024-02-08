@@ -5,13 +5,9 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
-// $routes->post('/insert', 'UserController::InsertUser');
-// $routes->get('/users' , 'UserController::selectUsers');
-// $routes->post('/users/delete' , 'UserController::delete');
-// $routes->post('/users/update' , 'UserController::update');
-$routes->get('/register' , 'Home::register');
-$routes->post('/register' , 'StudentController::register');
+$routes->get('/' , 'Home::index');
+$routes->get('/dashboard' , 'admin\AdminController::dashboard');
+// $routes->get('/admin', 'admin\AdminController::index');
+$routes->get('/admin', 'admin\AdminController::hello');
 
-$routes->get('/login' , 'Home::login');
-$routes->get('/contact' , 'Home::contact');
+$routes->get('courses/(:any)' , 'CourseController::math/$1');    

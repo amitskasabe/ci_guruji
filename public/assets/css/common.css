@@ -9,11 +9,13 @@
   --blue: #90e3f4;
   --dark: #1d1d1d;
   --button : #000675;
+  --fony:"Poppins", sans-serif;
+
 }
 
 body {
-  background-color: var(--bg) !important;
-  font-family: "Poppins", sans-serif;
+  /* background-color: var(--bg) !important; */
+  font-family: "Poppins", sans-serif!important;
 }
 
 .border-none {

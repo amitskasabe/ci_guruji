@@ -4,16 +4,12 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function register(): string
+    public function index()
     {
-        return view('register');
-    }
-    public function login(): string 
-    {
-        return view('login');
-    }
-    public function contact()
-    {
-        return view('contact');
+        $pageName = ['page' => 'home'];
+        echo view('components/header', $pageName);
+        echo view('pages/home');
+        echo view('components/courses');
+        echo view('components/footer');
     }
 }
