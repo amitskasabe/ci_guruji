@@ -14,7 +14,7 @@ class AdminController extends Controller
         if ($isLoggedIn == false) {
             return redirect()->to("/admin");
         }
-        echo "admin dashboard";
+        return view("admin/static/index");
     }
     public function hello()
     {

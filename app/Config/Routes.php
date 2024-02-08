@@ -8,6 +8,8 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/' , 'Home::index');
 $routes->get('/dashboard' , 'admin\AdminController::dashboard');
 // $routes->get('/admin', 'admin\AdminController::index');
-$routes->get('/admin', 'admin\AdminController::hello');
+$routes->get('/admin', 'admin\AdminController::login');
 
 $routes->get('courses/(:any)' , 'CourseController::math/$1');    
+
+// $routes->get('admin' , 'admin\login');
