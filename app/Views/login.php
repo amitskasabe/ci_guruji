@@ -26,17 +26,17 @@
                     <form class="form-horizontal" action="register" method="post">
                         <div class="form-group">
                             <label>User Name</label>
-                            <input type="text" class="form-control" name="username" placeholder="User Name">
+                            <input type="text"  id="username"class="form-control" name="username" placeholder="User Name">
                         </div>
                        
                         <div class="form-group">
                             <label>Password</label>
-                            <input type="password" class="form-control" name="password" placeholder="Password">
+                            <input type="password" id="password" class="form-control" name="password" placeholder="Password">
                         </div>
                         
                         
                     </form>
-                    <button class="form-control btn" name="button" value="button">Submit</button>
+                    <button class="form-control btn" id="submit" name="button" value="Submit" onclick="return validateForm()">Submit</button>
                 </div>
             </div>
         </div>
@@ -44,6 +44,8 @@
 </div>
     </div>
 
+    <script src="<?php echo base_url('public/assets/js/login.js') ?>"></script>
     <script src=<?php echo base_url('public/assets/bs/js/bootstrap.min.js') ?>></script>
+    
 </body>
 </html>

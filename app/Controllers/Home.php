@@ -12,4 +12,8 @@ class Home extends BaseController
     {
         return view('login');
     }
+    public function home(): string 
+    {
+        return view('home');
+    }
 }
