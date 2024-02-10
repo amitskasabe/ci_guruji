@@ -3,44 +3,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
 <?php $batch = "07-02-2024" ?>
 <style>
-    #learn-more{
-        background-color:#474F7A!important;
-        color:white !important;
-    }
-    #blur-blue{
-        width:150px;
-        height:150px;
-        position:absolute;
-        top:20%;
-        left:8%;
-        border-radius: 50%;
-        background: linear-gradient(to right,  #c86ef2 0%,#c054ee 37%,#be1ede 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter:blur(100px)
-
-    }
-    #blur-yellow{
-        width:150px;
-        height:150px;
-        position:absolute;
-        top:40%;
-        left:90%;
-        border-radius: 50%;
-        background: linear-gradient(to right,  #1F2544 0%,#FAEF5D 37%,#FFD0EC 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter:blur(80px)
-
-    }
-    #inst {
-        font-family: "Protest Riot", sans-serif;
-
-    }
+  
 </style>
 <section>
     <main>
         <div class="hero-section section ">
         <section class="bg-white ">
             
-            <div id="blur-blue" class="hidden sm:block md:block"></div>
-            <div id="blur-yellow" class="hidden sm:block md:block"></div>
+
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
         <a href="#" class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-blue-500 rounded-full role="alert">
             <span class="text-xs bg-blue-200 rounded-full text-dark px-4 py-1.5 mr-3">New</span> <span class="text-sm text-white font-medium">Enroll into New Batch Coming on <b><?= $batch ?></b> </span> 

@@ -1,0 +1,67 @@
+CRITICAL - 2024-02-10 11:18:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "component/header.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('component/header.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('component/header', [], true)
+ 3 APPPATH\Controllers\BlogController.php(15): view('component/header')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->showBlogs()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-10 11:18:53 --> ErrorException: Undefined variable $page
+in APPPATH\Views\components\header.php on line 14.
+ 1 APPPATH\Views\components\header.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\components\\header.php', 14)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\components\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('components/header', [], true)
+ 5 APPPATH\Controllers\BlogController.php(15): view('components/header')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->showBlogs()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-10 11:19:17 --> ErrorException: Undefined variable $page
+in APPPATH\Views\components\header.php on line 14.
+ 1 APPPATH\Views\components\header.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\components\\header.php', 14)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\components\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('components/header', [], true)
+ 5 APPPATH\Controllers\BlogController.php(15): view('components/header')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->showBlogs()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-10 11:25:43 --> ErrorException: Undefined array key "title"
+in APPPATH\Views\pages\blogs.php on line 7.
+ 1 APPPATH\Views\pages\blogs.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\blogs.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\blogs.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/blogs', [], true)
+ 5 APPPATH\Controllers\BlogController.php(22): view('pages/blogs', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->showBlogs()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-10 11:27:27 --> ErrorException: Undefined array key "published_date"
+in APPPATH\Views\pages\blogs.php on line 9.
+ 1 APPPATH\Views\pages\blogs.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "published_date"', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\blogs.php', 9)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\blogs.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/blogs', [], true)
+ 5 APPPATH\Controllers\BlogController.php(22): view('pages/blogs', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->showBlogs()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-10 11:39:44 --> ArgumentCountError: count() expects at least 1 argument, 0 given
+in APPPATH\Controllers\BlogController.php on line 23.
+ 1 APPPATH\Controllers\BlogController.php(23): count()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->showBlogs()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-10 11:40:57 --> ErrorException: Undefined variable $data
+in APPPATH\Controllers\BlogController.php on line 23.
+ 1 APPPATH\Controllers\BlogController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\server\\htdocs\\guruji-classes\\app\\Controllers\\BlogController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->showBlogs()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

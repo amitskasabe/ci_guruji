@@ -70,3 +70,152 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
  5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
  6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-08 19:57:05 --> Error: Class "App\Models\AdminModel" not found
+in APPPATH\Controllers\admin\AdminController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-08 19:57:30 --> Error: Class "App\Models\Admin\AdminModel" not found
+in APPPATH\Controllers\admin\AdminController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-08 19:57:59 --> Error: Class "App\Models\admin\AdminModel" not found
+in APPPATH\Controllers\admin\AdminController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-08 19:59:07 --> Error: Class "App\Models\admin\AdminModel" not found
+in APPPATH\Controllers\admin\AdminController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-08 20:01:00 --> Error: Class "App\Models\admin\AdminModel" not found
+in APPPATH\Controllers\admin\AdminController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-08 20:07:15 --> Error: Call to undefined function App\Controllers\Admin\password()
+in APPPATH\Controllers\admin\AdminController.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-08 20:08:08 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\admin\AdminController.php on line 33.
+ 1 APPPATH\Controllers\admin\AdminController.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\server\\htdocs\\guruji-classes\\app\\Controllers\\admin\\AdminController.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-08 20:13:27 --> ErrorException: Undefined global variable $_SESSION
+in APPPATH\Views\admin\static\index.php on line 3.
+ 1 APPPATH\Views\admin\static\index.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\index.php', 3)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/static/index', [], true)
+ 5 APPPATH\Controllers\admin\AdminController.php(18): view('admin/static/index')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-08 20:13:36 --> ErrorException: Undefined global variable $_SESSION
+in APPPATH\Views\admin\static\index.php on line 3.
+ 1 APPPATH\Views\admin\static\index.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\index.php', 3)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/static/index', [], true)
+ 5 APPPATH\Controllers\admin\AdminController.php(18): view('admin/static/index')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-08 20:15:30 --> Error: Object of class CodeIgniter\Session\Session could not be converted to string
+in APPPATH\Views\admin\static\index.php on line 2.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/static/index', [], true)
+ 4 APPPATH\Controllers\admin\AdminController.php(18): view('admin/static/index')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-08 20:15:41 --> Error: Object of class CodeIgniter\Session\Session could not be converted to string
+in APPPATH\Views\admin\static\index.php on line 2.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/static/index', [], true)
+ 4 APPPATH\Controllers\admin\AdminController.php(18): view('admin/static/index')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-08 20:20:36 --> ErrorException: Undefined variable $userDetails
+in APPPATH\Controllers\admin\AdminController.php on line 17.
+ 1 APPPATH\Controllers\admin\AdminController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userDetails', 'C:\\server\\htdocs\\guruji-classes\\app\\Controllers\\admin\\AdminController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-08 20:21:54 --> Error: Cannot use object of type CodeIgniter\Session\Session as array
+in APPPATH\Controllers\admin\AdminController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->dashboard()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-08 20:29:23 --> ErrorException: Undefined variable $fname
+in APPPATH\Views\admin\static\index.php on line 277.
+ 1 APPPATH\Views\admin\static\index.php(277): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fname', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\index.php', 277)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/static/index', [], true)
+ 5 APPPATH\Controllers\admin\AdminController.php(29): view('admin/static/index')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-08 20:29:39 --> ErrorException: Undefined variable $fname
+in APPPATH\Views\admin\static\index.php on line 277.
+ 1 APPPATH\Views\admin\static\index.php(277): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fname', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\index.php', 277)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/static/index', [], true)
+ 5 APPPATH\Controllers\admin\AdminController.php(29): view('admin/static/index')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-08 20:30:08 --> ErrorException: Undefined variable $fname
+in APPPATH\Views\admin\static\index.php on line 277.
+ 1 APPPATH\Views\admin\static\index.php(277): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fname', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\index.php', 277)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/static/index', [], true)
+ 5 APPPATH\Controllers\admin\AdminController.php(29): view('admin/static/index')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-08 20:30:27 --> TypeError: view(): Argument #2 ($data) must be of type array, string given, called in C:\server\htdocs\guruji-classes\app\Controllers\admin\AdminController.php on line 29
+in SYSTEMPATH\Common.php on line 1166.
+ 1 APPPATH\Controllers\admin\AdminController.php(29): view('admin/static/index', 'amit')
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-08 20:30:38 --> ErrorException: Undefined variable $fname
+in APPPATH\Views\admin\static\index.php on line 277.
+ 1 APPPATH\Views\admin\static\index.php(277): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fname', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\index.php', 277)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/static/index', [], true)
+ 5 APPPATH\Controllers\admin\AdminController.php(29): view('admin/static/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

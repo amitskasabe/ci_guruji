@@ -15,19 +15,55 @@
     </title>
 </head>
 <body>
-<nav class="bg-transparent text-dark h-14 py-2 px-2 flex justify-between ">
-    <div>
-    <div class="brand text-xl font-semibold"> Guruji Classes </div>
+<nav class="bg-transparent text-dark py-4 px-4 md:px-8 lg:px-16 xl:px-32">
+    <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <div class="text-xl font-semibold">Guruji Classes</div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-dark p-2 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-5">
+    <a href="home" class="font-semibold">Home</a>
+    <a href="about" class="font-semibold">About</a>
+    <a href="blogs" class="font-semibold">Blogs</a>
+    <a href="courses" class="font-semibold">Courses</a>
+    <a href="careers" class="font-semibold">Careers</a>
+</div>
     </div>
-    <div>
-    <ul class="flex justify-between items-center space-x-5">
-        <li><a href="" class="font-semibold">Home</a></li>
-        <li><a href="" class="font-semibold">About</a></li>
-        <li><a href="" class="font-semibold">Courses</a></li>
-        <li><a href="" class="font-semibold">Careers</a></li>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden mt-4">
+    <ul class="flex flex-col space-y-2">
+        <li><a href="/home" class="font-semibold">Home</a></li>
+        <li><a href="/about" class="font-semibold">About</a></li>
+        <li><a href="/courses" class="font-semibold">Courses</a></li>
+        <li><a href="/careers" class="font-semibold">Careers</a></li>
     </ul>
-    </div>
-    <div>Sign Up</div>
+</div>
+
 </nav>
+
+<script>
+    // JavaScript to toggle the mobile menu visibility
+     document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        var mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+
+        // Close the mobile menu if a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    });
+</script>
+
 
 

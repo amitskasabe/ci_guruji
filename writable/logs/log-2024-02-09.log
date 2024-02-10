@@ -1,0 +1,18 @@
+CRITICAL - 2024-02-09 04:58:05 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\admin\AdminController.php on line 19.
+ 1 APPPATH\Controllers\admin\AdminController.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\server\\htdocs\\guruji-classes\\app\\Controllers\\admin\\AdminController.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-09 19:46:02 --> ErrorException: Undefined variable $data
+in APPPATH\Views\pages\blogs.php on line 1.
+ 1 APPPATH\Views\pages\blogs.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\blogs.php', 1)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\blogs.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/blogs', [], true)
+ 5 APPPATH\Controllers\BlogController.php(17): view('pages/blogs', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->showBlogs()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
