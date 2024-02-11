@@ -16,16 +16,14 @@ class AdminController extends Controller
         $session = session();
         $userDetail = $session->get('userDetails');
         // $username = "amit";
-        $fname = $userDetail['first_name'];
-        $lname = $userDetail['last_name'];
+        // $fname = $userDetail['first_name'];
+        // $lname = $userDetail['last_name'];
         $username = "amit";
         if($username)
         {
             $isLoggedIn = true;
         }
-        if ($isLoggedIn == false) {
-            return redirect()->to("/admin" , $fname);
-        }
+        
         return view("admin/static/index" , ['firstname' => $username]);
     }
     public function loginpage()
@@ -50,7 +48,7 @@ class AdminController extends Controller
                 'last_name' => "kasabe",
             ];
             $session->set('userDetails', $userDetails);
-            return redirect()->to('/dashboard');
+            return redirect()->to('/admin/dashboard');
         } else {
             // Incorrect password
             echo "Incorrect password!";

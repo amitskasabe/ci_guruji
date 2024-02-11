@@ -28,3 +28,8 @@ class BlogController extends BaseController
 }
 
 ?>
+<script>
+    let button = document.getElemenetById("#button");
+    
+    let button = $("#button");
+</script>

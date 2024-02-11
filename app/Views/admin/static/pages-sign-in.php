@@ -58,7 +58,7 @@
             <input class="form-check-input" type="checkbox" value="remember-me" name="remember-me" checked>
             <span class="form-check-label">
               Remember me next time
-            </span>
+            </span>	
           </label>
 										</div>
 										<div class="text-center mt-3">

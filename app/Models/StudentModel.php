@@ -16,4 +16,10 @@ class StudentModel extends Model
     protected $useTimestamps = true;  // Corrected property name
     protected $createdField = 'created_at';
     protected $updatedField = 'updated_at';
+
+    public function getAllStudents(){
+        $data = $this->findAll();
+        return $data;
+    }
+    
 }
