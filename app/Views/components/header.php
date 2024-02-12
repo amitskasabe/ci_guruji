@@ -54,7 +54,7 @@
 <nav class="bg-transparent text-dark py-4 px-4 md:px-8 lg:px-16 xl:px-32">
     <div class="flex items-center justify-between">
         <!-- Logo -->
-        <div class="text-xl font-semibold">Guruji Classes</div>
+        <div class="text-xl font-semibold"><a href="<?php echo base_url('/') ?>">Guruji Classes</a></div>
 
         <!-- Mobile Menu Button -->
         <div class="md:hidden">
@@ -66,11 +66,11 @@
         </div>
 
         <div class="hidden md:flex items-center space-x-5">
-    <a href="<?= base_url('/') ?>" class="font-semibold">Home</a>
-    <a href="about" class="font-semibold">About</a>
-    <a href="blogs" class="font-semibold">Blogs</a>
-    <a href="courses" class="font-semibold">Courses</a>
-    <a href="careers" class="font-semibold">Careers</a>
+    <a href="<?= base_url('/') ?>" class="">Home</a>
+    <a href="about" class="">About</a>
+    <a href="blogs" class="">Blogs</a>
+    <a href="courses" class="">Courses</a>
+    <a href="careers" class="">Careers</a>
     <?php
     if ($username) {
         ?>
@@ -98,7 +98,7 @@
         <?php
     } else {
         ?>
-            <a href="login" class="font-semibold">login</a>
+            <a href="login" class="">login</a>
         <?php
     }
     ?>

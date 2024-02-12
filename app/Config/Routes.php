@@ -50,3 +50,7 @@ $routes->get('course' , 'Home::carers');
 $routes->get('careers' , 'Home::careers');
 
 $routes->get('learning' , 'LearningController::index');
+
+$routes->get('admin/write-blog' , 'admin\adminController::writeBlog');
+
+$routes->post('admin/add-blog' , 'admin\adminController::addBlog');

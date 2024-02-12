@@ -14,6 +14,7 @@ class BlogController extends BaseController
     }
     public function showBlogs()
     {
+        
         $page = ['page' => "blogs"];
         echo view('components/header', $page);
         $post = new BlogModel();
