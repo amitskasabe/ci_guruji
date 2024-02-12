@@ -48,3 +48,5 @@ $routes->get('courses' , 'Home::courses');
 $routes->get('course' , 'Home::carers');
 
 $routes->get('careers' , 'Home::careers');
+
+$routes->get('learning' , 'LearningController::index');

@@ -35,5 +35,27 @@
   
 </div>
 
-  </div>
 </section>
+
+<div>
+<?php
+$coursesEnrolled = ($students[0]['courses']);
+if($coursesEnrolled == "null")
+{
+    ?>
+    <h1 class="text-2xl text-center mt-2 text-blue-600 font-semibold"> No Courses Enrolled </h1>
+    <?php
+} else {
+    ?>
+    <h1>
+    <?php
+     foreach($courses as $course){
+      print_r($course);
+    }
+     ?>
+    </h1>
+    
+    <?php 
+}
+?>
+</div>

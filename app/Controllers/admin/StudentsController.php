@@ -3,6 +3,7 @@
 namespace App\Controllers\Admin;
 
 use App\Models\admin\AdminModel;
+use App\Models\StudentModel;
 use CodeIgniter\Controller;
 
 class StudentsController extends Controller
@@ -10,7 +11,9 @@ class StudentsController extends Controller
 
     public function index()
     {
-        echo view('admin/static/students');
+        $studentents = new StudentModel();
+        $studentsDetils = $studentents->getAllStudents();
+        echo view('admin/static/students' , ['students' => $studentsDetils]);
     }
 
 

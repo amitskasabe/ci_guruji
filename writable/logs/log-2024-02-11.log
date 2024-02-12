@@ -412,3 +412,388 @@ in APPPATH\Controllers\Home.php on line 87.
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 18:13:45 --> ErrorException: Undefined variable $page
+in APPPATH\Views\components\header.php on line 50.
+ 1 APPPATH\Views\components\header.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\components\\header.php', 50)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\components\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('components/header', [], true)
+ 5 APPPATH\Controllers\LearningController.php(12): view('components/header')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LearningController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LearningController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-11 19:22:53 --> mysqli_sql_exception: Not unique table/alias: 'students' in C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `student...', 0)
+#1 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `student...')
+#2 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `student...')
+#3 C:\server\htdocs\guruji-classes\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `student...', Array, false)
+#4 C:\server\htdocs\guruji-classes\system\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\server\htdocs\guruji-classes\app\Models\StudentModel.php(32): CodeIgniter\Model->__call('get', Array)
+#6 C:\server\htdocs\guruji-classes\app\Controllers\Home.php(88): App\Models\StudentModel->getAllCourses('amitkasabeoffic...')
+#7 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(941): App\Controllers\Home->profile()
+#8 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\server\htdocs\guruji-classes\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-02-11 19:22:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'students'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = :students.email:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\StudentModel.php(32): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\Home.php(88): App\Models\StudentModel->getAllCourses('amitkasabeofficial@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 19:22:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'students'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = \'amitkasabeofficial@gmail.com\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = \'amitkasabeofficial@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = :students.email:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Models\StudentModel.php(32): CodeIgniter\Model->__call('get', [])
+ 6 APPPATH\Controllers\Home.php(88): App\Models\StudentModel->getAllCourses('amitkasabeofficial@gmail.com')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 19:22:53 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'students'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = \'amitkasabeofficial@gmail.com\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = \'amitkasabeofficial@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = \'amitkasabeofficial@gmail.com\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = :students.email:', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\StudentModel.php(32): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\Home.php(88): App\Models\StudentModel->getAllCourses('amitkasabeofficial@gmail.com')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-11 19:23:30 --> mysqli_sql_exception: Not unique table/alias: 'students' in C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `student...', 0)
+#1 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `student...')
+#2 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `student...')
+#3 C:\server\htdocs\guruji-classes\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `student...', Array, false)
+#4 C:\server\htdocs\guruji-classes\system\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\server\htdocs\guruji-classes\app\Models\StudentModel.php(32): CodeIgniter\Model->__call('get', Array)
+#6 C:\server\htdocs\guruji-classes\app\Controllers\Home.php(88): App\Models\StudentModel->getAllCourses('amitkasabeoffic...')
+#7 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(941): App\Controllers\Home->profile()
+#8 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\server\htdocs\guruji-classes\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-02-11 19:23:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'students'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = :students.email:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\StudentModel.php(32): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\Home.php(88): App\Models\StudentModel->getAllCourses('amitkasabeofficial@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 19:23:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'students'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = \'amitkasabeofficial@gmail.com\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = \'amitkasabeofficial@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = :students.email:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Models\StudentModel.php(32): CodeIgniter\Model->__call('get', [])
+ 6 APPPATH\Controllers\Home.php(88): App\Models\StudentModel->getAllCourses('amitkasabeofficial@gmail.com')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 19:23:30 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'students'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = \'amitkasabeofficial@gmail.com\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = \'amitkasabeofficial@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = \'amitkasabeofficial@gmail.com\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = :students.email:', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\StudentModel.php(32): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\Home.php(88): App\Models\StudentModel->getAllCourses('amitkasabeofficial@gmail.com')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-11 19:24:40 --> mysqli_sql_exception: Not unique table/alias: 'students' in C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `student...', 0)
+#1 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `student...')
+#2 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `student...')
+#3 C:\server\htdocs\guruji-classes\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `student...', Array, false)
+#4 C:\server\htdocs\guruji-classes\system\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\server\htdocs\guruji-classes\app\Models\StudentModel.php(32): CodeIgniter\Model->__call('get', Array)
+#6 C:\server\htdocs\guruji-classes\app\Controllers\Home.php(88): App\Models\StudentModel->getAllCourses('amitkasabeoffic...')
+#7 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(941): App\Controllers\Home->profile()
+#8 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\server\htdocs\guruji-classes\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-02-11 19:24:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'students'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = :students.email:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\StudentModel.php(32): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\Home.php(88): App\Models\StudentModel->getAllCourses('amitkasabeofficial@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 19:24:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'students'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = \'amitkasabeofficial@gmail.com\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = \'amitkasabeofficial@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = :students.email:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Models\StudentModel.php(32): CodeIgniter\Model->__call('get', [])
+ 6 APPPATH\Controllers\Home.php(88): App\Models\StudentModel->getAllCourses('amitkasabeofficial@gmail.com')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 19:24:40 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'students'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = \'amitkasabeofficial@gmail.com\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = \'amitkasabeofficial@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = \'amitkasabeofficial@gmail.com\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `course`.`course_id`, `course`.`title` AS `course_title`
+FROM (`students`, `students`)
+LEFT JOIN `course` ON FIND_IN_SET(course.course_id, students.courses) > 0
+WHERE `students`.`email` = :students.email:', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\StudentModel.php(32): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\Home.php(88): App\Models\StudentModel->getAllCourses('amitkasabeofficial@gmail.com')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 19:28:28 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Views\pages\profile.php on line 51.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/profile', [], true)
+ 4 APPPATH\Controllers\Home.php(90): view('pages/profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 19:29:18 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Views\pages\profile.php on line 51.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/profile', [], true)
+ 4 APPPATH\Controllers\Home.php(90): view('pages/profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 19:29:26 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Views\pages\profile.php on line 51.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/profile', [], true)
+ 4 APPPATH\Controllers\Home.php(90): view('pages/profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 19:29:28 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Views\pages\profile.php on line 51.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/profile', [], true)
+ 4 APPPATH\Controllers\Home.php(90): view('pages/profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 19:30:20 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Views\pages\profile.php on line 53.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/profile', [], true)
+ 4 APPPATH\Controllers\Home.php(90): view('pages/profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 19:30:24 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Views\pages\profile.php on line 53.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/profile', [], true)
+ 4 APPPATH\Controllers\Home.php(90): view('pages/profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 19:30:24 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Views\pages\profile.php on line 53.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/profile', [], true)
+ 4 APPPATH\Controllers\Home.php(90): view('pages/profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-11 19:31:22 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM students
+        LEFT JOIN course ON FIND_IN_SET(course.course_id, stud...' at line 2 in C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php(306): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\server\htdocs\guruji-classes\app\Models\StudentModel.php(30): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...', Array)
+#4 C:\server\htdocs\guruji-classes\app\Controllers\Home.php(88): App\Models\StudentModel->getAllCourses('amitkasabeoffic...')
+#5 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(941): App\Controllers\Home->profile()
+#6 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\server\htdocs\guruji-classes\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-02-11 19:31:22 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM students
+        LEFT JOIN course ON FIND_IN_SET(course.course_id, stud...' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\StudentModel.php(30): CodeIgniter\Database\BaseConnection->query('
+        SELECT students.id, course.*,
+        FROM students
+        LEFT JOIN course ON FIND_IN_SET(course.course_id, students.courses) > 0
+        WHERE students.email = ?
+    ', [...])
+ 2 APPPATH\Controllers\Home.php(88): App\Models\StudentModel->getAllCourses('amitkasabeofficial@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 19:31:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM students
+        LEFT JOIN course ON FIND_IN_SET(course.course_id, stud...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT students.id, course.*,
+        FROM students
+        LEFT JOIN course ON FIND_IN_SET(course.course_id, students.courses) > 0
+        WHERE students.email = \'amitkasabeofficial@gmail.com\'
+    ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT students.id, course.*,
+        FROM students
+        LEFT JOIN course ON FIND_IN_SET(course.course_id, students.courses) > 0
+        WHERE students.email = \'amitkasabeofficial@gmail.com\'
+    ')
+ 3 APPPATH\Models\StudentModel.php(30): CodeIgniter\Database\BaseConnection->query('
+        SELECT students.id, course.*,
+        FROM students
+        LEFT JOIN course ON FIND_IN_SET(course.course_id, students.courses) > 0
+        WHERE students.email = ?
+    ', [...])
+ 4 APPPATH\Controllers\Home.php(88): App\Models\StudentModel->getAllCourses('amitkasabeofficial@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 19:31:22 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM students
+        LEFT JOIN course ON FIND_IN_SET(course.course_id, stud...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('
+        SELECT students.id, course.*,
+        FROM students
+        LEFT JOIN course ON FIND_IN_SET(course.course_id, students.courses) > 0
+        WHERE students.email = \'amitkasabeofficial@gmail.com\'
+    ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT students.id, course.*,
+        FROM students
+        LEFT JOIN course ON FIND_IN_SET(course.course_id, students.courses) > 0
+        WHERE students.email = \'amitkasabeofficial@gmail.com\'
+    ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT students.id, course.*,
+        FROM students
+        LEFT JOIN course ON FIND_IN_SET(course.course_id, students.courses) > 0
+        WHERE students.email = \'amitkasabeofficial@gmail.com\'
+    ')
+ 4 APPPATH\Models\StudentModel.php(30): CodeIgniter\Database\BaseConnection->query('
+        SELECT students.id, course.*,
+        FROM students
+        LEFT JOIN course ON FIND_IN_SET(course.course_id, students.courses) > 0
+        WHERE students.email = ?
+    ', [...])
+ 5 APPPATH\Controllers\Home.php(88): App\Models\StudentModel->getAllCourses('amitkasabeofficial@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -85,8 +85,9 @@ class Home extends Controller
     {
         $students = new StudentModel();
         $studnetDetails = $students->getAllStudents();
+        $courses = $students->getAllCourses('amitkasabeofficial@gmail.com');
         echo view('components/header', ['page' => 'profile']);
-        echo view('pages/profile' , ['students' => $studnetDetails]);
+        echo view('pages/profile', ['students' => $studnetDetails, 'courses' => $courses]);
     }
 
     public function about()

@@ -1,5 +1,9 @@
 <script src="<?= base_url('public/assets/admin/js/app.js') ?>"></script>
-
+<script src="<?= base_url('public/assets/js/jquery.js') ?>"></script>
+<script src="//cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+<script>
+	let table = new DataTable('#studentDetails');
+</script>
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
 			var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
