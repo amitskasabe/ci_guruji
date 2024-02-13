@@ -14,22 +14,26 @@
                 <div class="card">
                     <div class="card-body">
                     <h1> <?php if (session()->has('message')): ?>
-                <div class="alert alert-success text-success <?= session('message_type') ?? 'info' ?>">
-                    <?= session('message') ?>
-                </div>
-        <?php endif; ?> </h1>
-                        <form action="add-blog" method="post">
+                    <div class="alert alert-success text-success <?= session('message_type') ?? 'info' ?>">
+                        <?= session('message') ?>
+                    </div>
+                    <?php endif; ?> </h1>
+                        <form action="add-blog" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="" class="mt-2"> Select Category </label>
                                 <select name="cat" id="" class="form-control mt-2">
                                     <?php
                                     foreach ($categories as $category) {
                                         ?>
-                                                   <option value="<?php echo $category['category_id'] ?>"><?php print_r($category['category_name']) ?></option>
-                                               <?php
+                                        <option value="<?php echo $category['category_id'] ?>"><?php print_r($category['category_name']) ?></option>
+                                    <?php
                                     }
                                     ?>
                                 </select>
+                            </div>
+                            <div class="form-group mt-2">
+                                <label for="">Featured Image</label>
+                                <input type="file" name="featuredImage" id="featured-image" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="" class="mt-2"> Blog Title </label>

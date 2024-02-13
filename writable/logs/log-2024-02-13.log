@@ -1,0 +1,54 @@
+CRITICAL - 2024-02-13 06:37:10 --> ErrorException: fopen(http://localhost/guruji-classes/public/assets/blog-featured-images/index.html): Failed to open stream: HTTP wrapper does not support writeable connections
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 188.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(http://localhost/guruji-classes/public/assets/blog-featured-images/index.html): Failed to open stream: HTTP wrapper does not support writeable connections', 'C:\\server\\htdocs\\guruji-classes\\system\\HTTP\\Files\\UploadedFile.php', 188)
+ 2 SYSTEMPATH\HTTP\Files\UploadedFile.php(188): fopen('http://localhost/guruji-classes/public/assets/blog-featured-images/index.html', 'x+b')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(139): CodeIgniter\HTTP\Files\UploadedFile->setPath('http://localhost/guruji-classes/public/assets/blog-featured-images/')
+ 4 APPPATH\Controllers\BlogController.php(64): CodeIgniter\HTTP\Files\UploadedFile->move('http://localhost/guruji-classes/public/assets/blog-featured-images/', '1707806230_5bd057f0315e7fdf2f12.jpg')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->addBlog()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 07:02:03 --> Error: Call to a member function hasFileErrors() on string
+in APPPATH\Controllers\BlogController.php on line 79.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->addBlog()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 08:05:07 --> ErrorException: mkdir(): File exists
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 185.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mkdir(): File exists', 'C:\\server\\htdocs\\guruji-classes\\system\\HTTP\\Files\\UploadedFile.php', 185)
+ 2 SYSTEMPATH\HTTP\Files\UploadedFile.php(185): mkdir('public/assets/images/blog-featured-images/', 511, true)
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(139): CodeIgniter\HTTP\Files\UploadedFile->setPath('public/assets/images/blog-featured-images/')
+ 4 APPPATH\Controllers\BlogController.php(55): CodeIgniter\HTTP\Files\UploadedFile->move('public/assets/images/blog-featured-images/', '1707811507_2ac60c5c82ac26868c0b.jpg')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->addBlog()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 08:14:47 --> BadMethodCallException: Call to undefined method App\Models\Admin\BlogModel::addPost
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\BlogController.php(77): CodeIgniter\Model->__call('addPost', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->addBlog()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 08:15:40 --> BadMethodCallException: Call to undefined method App\Models\Admin\BlogModel::addPost
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\BlogController.php(77): CodeIgniter\Model->__call('addPost', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->addBlog()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 08:15:46 --> BadMethodCallException: Call to undefined method App\Models\Admin\BlogModel::addPost
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\BlogController.php(77): CodeIgniter\Model->__call('addPost', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->addBlog()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 08:15:56 --> BadMethodCallException: Call to undefined method App\Models\Admin\BlogModel::addPost
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\BlogController.php(77): CodeIgniter\Model->__call('addPost', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->addBlog()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

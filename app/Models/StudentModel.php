@@ -17,9 +17,9 @@ class StudentModel extends Model
     protected $createdField = 'created_at';
     protected $updatedField = 'updated_at';
 
-    public function getAllStudents()
+    public function getAllStudents($email)
     {
-        $data = $this->findAll();
+        $data = $this->where('email', $email)->findAll();
         return $data;
     }
 

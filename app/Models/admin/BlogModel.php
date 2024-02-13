@@ -12,9 +12,11 @@ class BlogModel extends Model
     protected $table = 'posts';
     protected $primaryKey = "postId";
     protected $allowedFields = [
+        'featured_image',
         'postId',
         'title',
         'content',
+        'img',
         'published_date',
         'author_id',
         'category_id',
@@ -24,6 +26,16 @@ class BlogModel extends Model
     public function showBlogs()
     {
         return $this->findAll();
+    }
+
+    public function addPost($data)
+    {
+        $data = $this->insert($data);
+        if ($data) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 

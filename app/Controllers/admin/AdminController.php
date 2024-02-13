@@ -59,45 +59,4 @@ class AdminController extends Controller
             echo "User not found!";
         }
     }
-    public function writeBlog()
-    {
-        $cat = new CategoryModel();
-        $categories = $cat->selectCats();
-        echo view('admin/static/write-blogs', ['categories' => $categories]);
-
-    }
-
-    public function addBlog()
-    {
-
-        $posts = new BlogModel();
-        $title = $this->request->getPost('title');
-        $content = $this->request->getPost('content');
-        $publishedDate = date('Y-m-d H:i:s');
-        $authorId = 1;
-        $categoryId = $this->request->getPost('cat');
-        $postData = [
-            'title' => $title,
-            'content' => $content,
-            'publish_date' => $publishedDate,
-            'author_id' => $authorId,
-            'category_id' => $categoryId
-        ];
-        $insertData = $posts->insert($postData);
-        if ($insertData) {
-            $session = session();
-            $session->setFlashdata('message', 'Blog Added');
-            return redirect()->to('admin/write-blog');
-
-        } else {
-            $session = session();
-            $session->setFlashdata('message', 'Failed to add Blog , Please contact admin ');
-            return redirect()->to('admin/write-blog');
-
-        }
-        // $categories->insert($cat);
-    }
-
-
-
 }
