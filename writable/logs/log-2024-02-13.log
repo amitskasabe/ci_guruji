@@ -52,3 +52,755 @@ in SYSTEMPATH\Model.php on line 874.
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 08:53:02 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "../components/header.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('../components/header.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('../components/header', [], true)
+ 3 APPPATH\Controllers\BlogController.php(98): view('../components/header')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 08:53:07 --> ErrorException: Undefined variable $page
+in APPPATH\Views\components\header.php on line 50.
+ 1 APPPATH\Views\components\header.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\components\\header.php', 50)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\components\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('components/header', [], true)
+ 5 APPPATH\Controllers\BlogController.php(98): view('components/header')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 08:56:26 --> ErrorException: Undefined variable $articleId
+in APPPATH\Views\pages\read-articles.php on line 2.
+ 1 APPPATH\Views\pages\read-articles.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $articleId', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\read-articles.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\read-articles.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/read-articles.php', [], true)
+ 5 APPPATH\Controllers\BlogController.php(99): view('pages/read-articles.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-13 09:26:04 --> mysqli_sql_exception: Unknown column 'posts.postId' in 'where clause' in C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\server\htdocs\guruji-classes\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\server\htdocs\guruji-classes\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\server\htdocs\guruji-classes\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, 'XnJn26llI6Vxjni...')
+#6 C:\server\htdocs\guruji-classes\app\Controllers\BlogController.php(114): CodeIgniter\BaseModel->find('XnJn26llI6Vxjni...')
+#7 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6Vxjni...')
+#8 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+#9 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\server\htdocs\guruji-classes\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-02-13 09:26:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'posts.postId' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = :posts.postId:', [...], false)
+ 2 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, 'XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 4 APPPATH\Controllers\BlogController.php(114): CodeIgniter\BaseModel->find('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:26:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'posts.postId' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = \'XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = \'XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = :posts.postId:', [...], false)
+ 4 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, 'XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 6 APPPATH\Controllers\BlogController.php(114): CodeIgniter\BaseModel->find('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:26:04 --> [Caused by] mysqli_sql_exception: Unknown column 'posts.postId' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = \'XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = \'XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = \'XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = :posts.postId:', [...], false)
+ 5 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, 'XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 7 APPPATH\Controllers\BlogController.php(114): CodeIgniter\BaseModel->find('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-13 09:26:28 --> mysqli_sql_exception: Unknown column 'posts.postId' in 'where clause' in C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\server\htdocs\guruji-classes\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\server\htdocs\guruji-classes\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\server\htdocs\guruji-classes\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, 'XnJn26llI6Vxjni...')
+#6 C:\server\htdocs\guruji-classes\app\Controllers\BlogController.php(114): CodeIgniter\BaseModel->find('XnJn26llI6Vxjni...')
+#7 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6Vxjni...')
+#8 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+#9 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\server\htdocs\guruji-classes\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-02-13 09:26:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'posts.postId' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = :posts.postId:', [...], false)
+ 2 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, 'XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 4 APPPATH\Controllers\BlogController.php(114): CodeIgniter\BaseModel->find('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:26:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'posts.postId' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = \'XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = \'XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = :posts.postId:', [...], false)
+ 4 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, 'XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 6 APPPATH\Controllers\BlogController.php(114): CodeIgniter\BaseModel->find('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:26:28 --> [Caused by] mysqli_sql_exception: Unknown column 'posts.postId' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = \'XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = \'XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = \'XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = :posts.postId:', [...], false)
+ 5 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, 'XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 7 APPPATH\Controllers\BlogController.php(114): CodeIgniter\BaseModel->find('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-13 09:26:38 --> mysqli_sql_exception: Unknown column 'posts.postId' in 'where clause' in C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\server\htdocs\guruji-classes\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\server\htdocs\guruji-classes\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\server\htdocs\guruji-classes\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+#6 C:\server\htdocs\guruji-classes\app\Controllers\BlogController.php(114): CodeIgniter\BaseModel->find('1')
+#7 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6Vxjni...')
+#8 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+#9 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\server\htdocs\guruji-classes\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-02-13 09:26:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'posts.postId' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = :posts.postId:', [...], false)
+ 2 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 4 APPPATH\Controllers\BlogController.php(114): CodeIgniter\BaseModel->find('1')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:26:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'posts.postId' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = :posts.postId:', [...], false)
+ 4 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 6 APPPATH\Controllers\BlogController.php(114): CodeIgniter\BaseModel->find('1')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:26:38 --> [Caused by] mysqli_sql_exception: Unknown column 'posts.postId' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `posts`
+WHERE `posts`.`postId` = :posts.postId:', [...], false)
+ 5 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 7 APPPATH\Controllers\BlogController.php(114): CodeIgniter\BaseModel->find('1')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:32:45 --> TypeError: CodeIgniter\Database\BaseBuilder::get(): Argument #1 ($limit) must be of type ?int, string given, called in C:\server\htdocs\guruji-classes\system\Model.php on line 872
+in SYSTEMPATH\Database\BaseBuilder.php on line 1608.
+ 1 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get('posts')
+ 2 APPPATH\Models\admin\BlogModel.php(32): CodeIgniter\Model->__call('get', [...])
+ 3 APPPATH\Controllers\BlogController.php(114): App\Models\Admin\BlogModel->showSingleBlog('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:33:54 --> Error: Call to a member function where() on array
+in APPPATH\Models\admin\BlogModel.php on line 32.
+ 1 APPPATH\Controllers\BlogController.php(114): App\Models\Admin\BlogModel->showSingleBlog('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:36:43 --> ErrorException: Array to string conversion
+in APPPATH\Views\pages\read-articles.php on line 2.
+ 1 APPPATH\Views\pages\read-articles.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\read-articles.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\read-articles.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/read-articles.php', [], true)
+ 5 APPPATH\Controllers\BlogController.php(115): view('pages/read-articles.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:38:39 --> ErrorException: Undefined variable $articleSingle
+in APPPATH\Views\pages\read-articles.php on line 2.
+ 1 APPPATH\Views\pages\read-articles.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $articleSingle', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\read-articles.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\read-articles.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/read-articles.php', [], true)
+ 5 APPPATH\Controllers\BlogController.php(116): view('pages/read-articles.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:40:23 --> ErrorException: Undefined array key "featured_image"
+in APPPATH\Views\pages\read-articles.php on line 2.
+ 1 APPPATH\Views\pages\read-articles.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "featured_image"', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\read-articles.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\read-articles.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/read-articles.php', [], true)
+ 5 APPPATH\Controllers\BlogController.php(116): view('pages/read-articles.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:40:43 --> ErrorException: Undefined array key "featured_image"
+in APPPATH\Views\pages\read-articles.php on line 2.
+ 1 APPPATH\Views\pages\read-articles.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "featured_image"', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\read-articles.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\read-articles.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/read-articles.php', [], true)
+ 5 APPPATH\Controllers\BlogController.php(116): view('pages/read-articles.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:40:50 --> ErrorException: Undefined array key "featured_image"
+in APPPATH\Views\pages\read-articles.php on line 3.
+ 1 APPPATH\Views\pages\read-articles.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "featured_image"', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\read-articles.php', 3)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\read-articles.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/read-articles.php', [], true)
+ 5 APPPATH\Controllers\BlogController.php(116): view('pages/read-articles.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:41:25 --> ErrorException: Undefined array key 0
+in APPPATH\Views\pages\read-articles.php on line 2.
+ 1 APPPATH\Views\pages\read-articles.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\read-articles.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\read-articles.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/read-articles.php', [], true)
+ 5 APPPATH\Controllers\BlogController.php(116): view('pages/read-articles.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('alt=')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:41:39 --> ErrorException: Undefined array key 0
+in APPPATH\Views\pages\read-articles.php on line 2.
+ 1 APPPATH\Views\pages\read-articles.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\read-articles.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\read-articles.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/read-articles.php', [], true)
+ 5 APPPATH\Controllers\BlogController.php(116): view('pages/read-articles.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('alt=')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:45:01 --> ErrorException: Undefined array key "title"
+in APPPATH\Views\pages\read-articles.php on line 3.
+ 1 APPPATH\Views\pages\read-articles.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\read-articles.php', 3)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\read-articles.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/read-articles.php', [], true)
+ 5 APPPATH\Controllers\BlogController.php(116): view('pages/read-articles.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:45:11 --> ParseError: syntax error, unexpected token ";"
+in APPPATH\Views\pages\read-articles.php on line 3.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/read-articles.php', [], true)
+ 3 APPPATH\Controllers\BlogController.php(116): view('pages/read-articles.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('XnJn26llI6VxjnijohCNkUjH3AgctSZ1vZmId1j8')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:49:45 --> ErrorException: Undefined array key 0
+in APPPATH\Views\pages\read-articles.php on line 3.
+ 1 APPPATH\Views\pages\read-articles.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\read-articles.php', 3)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\pages\\read-articles.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/read-articles.php', [], true)
+ 5 APPPATH\Controllers\BlogController.php(116): view('pages/read-articles.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('blogs')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-13 14:11:58 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'guruji', 3306, '', 0)
+#1 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\server\htdocs\guruji-classes\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\server\htdocs\guruji-classes\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\server\htdocs\guruji-classes\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\server\htdocs\guruji-classes\app\Controllers\Home.php(71): CodeIgniter\BaseModel->first()
+#7 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(941): App\Controllers\Home->signin()
+#8 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\server\htdocs\guruji-classes\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\server\htdocs\guruji-classes\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\server\htdocs\guruji-classes\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\server\htdocs\guruji-classes\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 C:\server\htdocs\guruji-classes\app\Controllers\Home.php(71): CodeIgniter\BaseModel->first()
+#6 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(941): App\Controllers\Home->signin()
+#7 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\server\htdocs\guruji-classes\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-02-13 14:11:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Home.php(71): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->signin()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 15:18:07 --> ParseError: syntax error, unexpected token "]"
+in APPPATH\Controllers\BlogController.php on line 128.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(288): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\server\\htdocs\\guruji-classes\\app\\Controllers\\BlogController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BlogController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BlogController')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\BlogController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 15:18:47 --> ParseError: syntax error, unexpected token "]", expecting variable or "{" or "$"
+in APPPATH\Controllers\BlogController.php on line 128.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(288): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\server\\htdocs\\guruji-classes\\app\\Controllers\\BlogController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BlogController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BlogController')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\BlogController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 15:18:53 --> ParseError: syntax error, unexpected token "]", expecting variable or "{" or "$"
+in APPPATH\Controllers\BlogController.php on line 128.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(288): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\server\\htdocs\\guruji-classes\\app\\Controllers\\BlogController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BlogController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BlogController')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\BlogController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 15:21:55 --> Error: Call to a member function find() on string
+in APPPATH\Controllers\BlogController.php on line 116.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('3pPsq1BcgRMACZElFA0R9rHYm5tUmuZoaj5qLWIM')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 15:22:01 --> Error: Call to a member function findAll() on string
+in APPPATH\Controllers\BlogController.php on line 116.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('3pPsq1BcgRMACZElFA0R9rHYm5tUmuZoaj5qLWIM')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 15:22:16 --> Error: Call to a member function where() on string
+in APPPATH\Controllers\BlogController.php on line 116.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->readarticle('3pPsq1BcgRMACZElFA0R9rHYm5tUmuZoaj5qLWIM')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 17:04:16 --> Error: Call to a member function getName() on null
+in APPPATH\Controllers\Home.php on line 127.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->UploadHomework()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 17:05:04 --> Error: Call to a member function getName() on null
+in APPPATH\Controllers\Home.php on line 127.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->UploadHomework()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-13 17:10:24 --> mysqli_sql_exception: Table 'guruji.submissions' doesn't exist in C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `su...', 0)
+#1 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `su...')
+#2 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `su...')
+#3 C:\server\htdocs\guruji-classes\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `su...', Array, false)
+#4 C:\server\htdocs\guruji-classes\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\server\htdocs\guruji-classes\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\server\htdocs\guruji-classes\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\server\htdocs\guruji-classes\app\Controllers\Home.php(144): CodeIgniter\Model->insert(Array)
+#8 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(941): App\Controllers\Home->UploadHomework()
+#9 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\server\htdocs\guruji-classes\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-02-13 17:10:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'guruji.submissions' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `submissions` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (:student_id:, :assignment_id:, :file_path:, :comments:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Home.php(144): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->UploadHomework()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 17:10:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'guruji.submissions' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `submissions` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (123, 456, \'1707844224_66cb2e155279e04247bc.csv\', \'Great work!\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `submissions` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (123, 456, \'1707844224_66cb2e155279e04247bc.csv\', \'Great work!\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `submissions` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (:student_id:, :assignment_id:, :file_path:, :comments:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Home.php(144): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->UploadHomework()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 17:10:24 --> [Caused by] mysqli_sql_exception: Table 'guruji.submissions' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `submissions` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (123, 456, \'1707844224_66cb2e155279e04247bc.csv\', \'Great work!\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `submissions` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (123, 456, \'1707844224_66cb2e155279e04247bc.csv\', \'Great work!\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `submissions` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (123, 456, \'1707844224_66cb2e155279e04247bc.csv\', \'Great work!\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `submissions` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (:student_id:, :assignment_id:, :file_path:, :comments:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(144): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->UploadHomework()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-13 17:10:42 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`guruji`.`homework`, CONSTRAINT `homework_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`)) in C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ho...', 0)
+#1 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ho...')
+#2 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ho...')
+#3 C:\server\htdocs\guruji-classes\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ho...', Array, false)
+#4 C:\server\htdocs\guruji-classes\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\server\htdocs\guruji-classes\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\server\htdocs\guruji-classes\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\server\htdocs\guruji-classes\app\Controllers\Home.php(144): CodeIgniter\Model->insert(Array)
+#8 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(941): App\Controllers\Home->UploadHomework()
+#9 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\server\htdocs\guruji-classes\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-02-13 17:10:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`guruji`.`homework`, CONSTRAINT `homework_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `homework` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (:student_id:, :assignment_id:, :file_path:, :comments:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Home.php(144): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->UploadHomework()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 17:10:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`guruji`.`homework`, CONSTRAINT `homework_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `homework` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (123, 456, \'1707844242_5797f4e13d3e392e1984.csv\', \'Great work!\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `homework` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (123, 456, \'1707844242_5797f4e13d3e392e1984.csv\', \'Great work!\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `homework` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (:student_id:, :assignment_id:, :file_path:, :comments:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Home.php(144): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->UploadHomework()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 17:10:42 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`guruji`.`homework`, CONSTRAINT `homework_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `homework` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (123, 456, \'1707844242_5797f4e13d3e392e1984.csv\', \'Great work!\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `homework` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (123, 456, \'1707844242_5797f4e13d3e392e1984.csv\', \'Great work!\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `homework` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (123, 456, \'1707844242_5797f4e13d3e392e1984.csv\', \'Great work!\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `homework` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (:student_id:, :assignment_id:, :file_path:, :comments:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(144): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->UploadHomework()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-13 17:11:29 --> mysqli_sql_exception: Unknown column 'student_id' in 'field list' in C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ho...', 0)
+#1 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ho...')
+#2 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ho...')
+#3 C:\server\htdocs\guruji-classes\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ho...', Array, false)
+#4 C:\server\htdocs\guruji-classes\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\server\htdocs\guruji-classes\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\server\htdocs\guruji-classes\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\server\htdocs\guruji-classes\app\Controllers\Home.php(144): CodeIgniter\Model->insert(Array)
+#8 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(941): App\Controllers\Home->UploadHomework()
+#9 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\server\htdocs\guruji-classes\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-02-13 17:11:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'student_id' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `homework` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (:student_id:, :assignment_id:, :file_path:, :comments:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Home.php(144): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->UploadHomework()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 17:11:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'student_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `homework` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (123, 456, \'1707844289_6ea77e6908e4df80d03b.csv\', \'Great work!\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `homework` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (123, 456, \'1707844289_6ea77e6908e4df80d03b.csv\', \'Great work!\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `homework` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (:student_id:, :assignment_id:, :file_path:, :comments:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Home.php(144): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->UploadHomework()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 17:11:29 --> [Caused by] mysqli_sql_exception: Unknown column 'student_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `homework` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (123, 456, \'1707844289_6ea77e6908e4df80d03b.csv\', \'Great work!\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `homework` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (123, 456, \'1707844289_6ea77e6908e4df80d03b.csv\', \'Great work!\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `homework` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (123, 456, \'1707844289_6ea77e6908e4df80d03b.csv\', \'Great work!\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `homework` (`student_id`, `assignment_id`, `file_path`, `comments`) VALUES (:student_id:, :assignment_id:, :file_path:, :comments:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(144): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->UploadHomework()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 17:21:56 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\Home.php on line 128.
+ 1 APPPATH\Controllers\Home.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\server\\htdocs\\guruji-classes\\app\\Controllers\\Home.php', 128)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->UploadHomework()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 17:22:18 --> ErrorException: Undefined array key "id"
+in APPPATH\Controllers\Home.php on line 128.
+ 1 APPPATH\Controllers\Home.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\server\\htdocs\\guruji-classes\\app\\Controllers\\Home.php', 128)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->UploadHomework()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 17:55:39 --> ErrorException: Array to string conversion
+in APPPATH\Views\admin\static\Homework.php on line 2.
+ 1 APPPATH\Views\admin\static\Homework.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\Homework.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\Homework.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/static/homework', [], true)
+ 5 APPPATH\Controllers\admin\HomeworkController.php(16): view('admin/static/homework', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\HomeworkController->ShowHomework()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HomeworkController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 17:57:00 --> ErrorException: Undefined array key "title"
+in APPPATH\Views\admin\static\Homework.php on line 6.
+ 1 APPPATH\Views\admin\static\Homework.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\Homework.php', 6)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\Homework.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/static/homework', [], true)
+ 5 APPPATH\Controllers\admin\HomeworkController.php(17): view('admin/static/homework', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\HomeworkController->ShowHomework()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HomeworkController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 17:57:57 --> ErrorException: Undefined variable $page
+in APPPATH\Views\components\header.php on line 50.
+ 1 APPPATH\Views\components\header.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\components\\header.php', 50)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\components\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('components/header', [], true)
+ 5 APPPATH\Controllers\admin\HomeworkController.php(13): view('components/header')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\HomeworkController->ShowHomework()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HomeworkController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 17:58:36 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/static/header.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/static/header.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/static/header', [], true)
+ 3 APPPATH\Controllers\admin\HomeworkController.php(13): view('admin/static/header')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\HomeworkController->ShowHomework()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HomeworkController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 17:59:11 --> ErrorException: Undefined variable $key
+in APPPATH\Views\admin\static\Homework.php on line 6.
+ 1 APPPATH\Views\admin\static\Homework.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $key', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\Homework.php', 6)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\Homework.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/static/homework', [], true)
+ 5 APPPATH\Controllers\admin\HomeworkController.php(14): view('admin/static/homework')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\HomeworkController->ShowHomework()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HomeworkController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 18:05:59 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\admin\HomeworkController.php on line 16.
+ 1 APPPATH\Controllers\admin\HomeworkController.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\server\\htdocs\\guruji-classes\\app\\Controllers\\admin\\HomeworkController.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\HomeworkController->ShowHomework()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HomeworkController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 18:10:56 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\static\Homework.php on line 32.
+ 1 APPPATH\Views\admin\static\Homework.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\Homework.php', 32)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\Homework.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/static/homework', [], true)
+ 5 APPPATH\Controllers\admin\HomeworkController.php(16): view('admin/static/homework', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\HomeworkController->ShowHomework()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HomeworkController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 18:11:12 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\static\Homework.php on line 32.
+ 1 APPPATH\Views\admin\static\Homework.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\Homework.php', 32)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\Homework.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/static/homework', [], true)
+ 5 APPPATH\Controllers\admin\HomeworkController.php(16): view('admin/static/homework', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\HomeworkController->ShowHomework()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HomeworkController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 18:12:06 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\static\Homework.php on line 32.
+ 1 APPPATH\Views\admin\static\Homework.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\Homework.php', 32)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\Homework.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/static/homework', [], true)
+ 5 APPPATH\Controllers\admin\HomeworkController.php(18): view('admin/static/homework', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\HomeworkController->ShowHomework()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HomeworkController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 18:12:28 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\static\Homework.php on line 33.
+ 1 APPPATH\Views\admin\static\Homework.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\Homework.php', 33)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\Homework.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/static/homework', [], true)
+ 5 APPPATH\Controllers\admin\HomeworkController.php(18): view('admin/static/homework', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\HomeworkController->ShowHomework()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HomeworkController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 18:13:35 --> ErrorException: Undefined array key 0
+in APPPATH\Views\admin\static\Homework.php on line 32.
+ 1 APPPATH\Views\admin\static\Homework.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\Homework.php', 32)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\Homework.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/static/homework', [], true)
+ 5 APPPATH\Controllers\admin\HomeworkController.php(18): view('admin/static/homework', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\HomeworkController->ShowHomework()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HomeworkController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 18:21:43 --> ArgumentCountError: Too few arguments to function App\Models\StudentModel::getAllStudents(), 0 passed in C:\server\htdocs\guruji-classes\app\Controllers\admin\StudentsController.php on line 15 and exactly 1 expected
+in APPPATH\Models\StudentModel.php on line 20.
+ 1 APPPATH\Controllers\admin\StudentsController.php(15): App\Models\StudentModel->getAllStudents()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\StudentsController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\StudentsController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 18:27:59 --> ErrorException: Undefined property: App\Controllers\Admin\AdminController::$load
+in APPPATH\Controllers\admin\AdminController.php on line 67.
+ 1 APPPATH\Controllers\admin\AdminController.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin\\AdminController::$load', 'C:\\server\\htdocs\\guruji-classes\\app\\Controllers\\admin\\AdminController.php', 67)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -23,6 +23,12 @@ class StudentModel extends Model
         return $data;
     }
 
+    public function allStudents()
+    {
+        $students = $this->findAll();
+        return $students;
+    }
+
     public function getAllCourses($studentEmail)
     {
         $db = \Config\Database::connect();

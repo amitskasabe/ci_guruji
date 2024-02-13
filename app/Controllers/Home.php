@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\HomeworkModel;
 use App\Models\StudentModel;
 use CodeIgniter\Controller;
 use CodeIgniter\HTTP\Files\UploadedFile;
@@ -99,7 +100,11 @@ class Home extends Controller
         $currentUser = $session->get('username');
 
         $studnetDetails = $students->getAllStudents($currentUser);
-        $courses = $students->getAllCourses('amitkasabeofficial@gmail.com');
+        $currentuser = $studnetDetails[0]['email'];
+        $courses = $students->getAllCourses($currentuser);
+        
+        // print_r($courses);
+        
         echo view('components/header', ['page' => 'profile']);
         echo view('pages/profile', ['students' => $studnetDetails, 'courses' => $courses]);
         echo view('components/footer');
@@ -121,7 +126,44 @@ class Home extends Controller
 
     public function UploadHomework()
     {
-        return 'hello world';
+        $homework = new HomeworkModel();
+        $student =  new StudentModel();
+        $session = session();
+        $currentUser = $session->get('username');
+        $currentUser = $student->getAllStudents($currentUser);
+        print_r($currentUser);
+        $userId = $currentUser[0]['id'];
+        echo $userId;
+        // exit();
+        $files = $this->request->getFiles();
+        if (!empty($files)) {
+            foreach ($files['homework'] as $file) {
+                // Check if a file is valid and hasn't been moved
+                if ($file->isValid() && !$file->hasMoved()) {
+                    // Print information about the uploaded file
+                    $newName = $file->getRandomName();
+                    $file->move('./public/homework', $newName);
+                    $data = [
+                        'id' => $userId,
+                        'assignment_id' => 456,
+                        'file_path' => $newName, // Store the filename in the database
+                        'comments' => 'Great work!',
+                    ];
+                    if ($homework->insert($data)) {
+                        return redirect()->to('profile')->with('message',' Homework Submitted Successfully');
+                    } else {
+                        return redirect()->to('profile')->with('message','Something Went Wrong , we can not accept your home at this moment.');
+                    }
+
+                    
+                } else {
+                    echo 'No valid file uploaded for file ' . $file->getName() . '<br>';
+                }
+            }
+        } else {
+            echo 'No files uploaded.';
+        }
+
     }
 
 }

@@ -12,7 +12,7 @@ class StudentsController extends Controller
     public function index()
     {
         $studentents = new StudentModel();
-        $studentsDetils = $studentents->getAllStudents();
+        $studentsDetils = $studentents->allStudents();
         echo view('admin/static/students' , ['students' => $studentsDetils]);
     }
 

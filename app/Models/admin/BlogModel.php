@@ -16,7 +16,7 @@ class BlogModel extends Model
         'postId',
         'title',
         'content',
-        'img',
+        'article_id',
         'published_date',
         'author_id',
         'category_id',
@@ -27,7 +27,11 @@ class BlogModel extends Model
     {
         return $this->findAll();
     }
-
+    public function showSingleBlog($blogId)
+    {
+        $blogSingle = $this->where('article_id', $blogId)->find();
+        return $blogSingle;
+    }
     public function addPost($data)
     {
         $data = $this->insert($data);

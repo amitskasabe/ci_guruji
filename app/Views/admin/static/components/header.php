@@ -53,6 +53,12 @@
         </li>
 
         <li class="sidebar-item">
+          <a class="sidebar-link" href="homework">
+            <i class="align-middle" data-feather="book"></i>
+            <span class="align-middle">Homework</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
           <a class="sidebar-link" href="pages-sign-in.html">
             <i class="align-middle" data-feather="log-in"></i>
             <span class="align-middle">Sign In</span>

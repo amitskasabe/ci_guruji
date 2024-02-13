@@ -6,6 +6,7 @@ use App\Models\admin\AdminModel;
 use App\Models\Admin\BlogModel;
 use App\Models\Admin\CategoryModel;
 use CodeIgniter\Controller;
+use CodeIgniter\Config\Services;
 
 class AdminController extends Controller
 {
@@ -58,5 +59,18 @@ class AdminController extends Controller
             // User does not exist
             echo "User not found!";
         }
+    }
+    // admin logout 
+
+    public function logout()
+    {
+        // Load the session service
+        $session = Services::session();
+
+        // Destroy all sessions
+        $session->destroy();
+
+        // Redirect to the login page or any other page after logout
+        return redirect()->to('admin');
     }
 }

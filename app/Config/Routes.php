@@ -58,3 +58,15 @@ $routes->post('admin/add-blog', 'BlogController::addBlog');
 // upload homework 
 
 $routes->post('upload-homework', 'Home::UploadHomework');
+
+// read articles
+
+$routes->get('read-article/(:segment)', 'BlogController::readarticle/$1');
+
+
+// show homework route
+
+$routes->get('admin/homework' , 'admin\HomeworkController::ShowHomework');
+
+// admin logout
+$routes->get('admin/admin-logout', 'admin\AdminController::logout');

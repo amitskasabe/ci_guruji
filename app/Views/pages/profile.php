@@ -56,11 +56,12 @@ if($coursesEnrolled == "null")
 }
 ?>
 </div>
-
+<?php  $message = session()->get('message'); ?>
 <!-- component -->
 <div class="bg-slate-100 h-screen mb-5  sm:px-8 md:px-16 sm:py-8">
   <h1 class="text-2xl text-center mb-5"> Submit Your Homework </h1>
-      <form action="upload-homework" method="post">
+  <h1 class="text-2xl text-center mb-5 mt-5 text-green-500"><?= $message ?></h1>
+      <form action="upload-homework" method="post" enctype="multipart/form-data">
       <main class="container mx-auto max-w-screen-lg h-full">
         <!-- file upload modal -->
         <article aria-label="File Upload Modal" class="relative h-full flex flex-col bg-white shadow-xl rounded-md" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter="dragEnterHandler(event);">
