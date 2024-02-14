@@ -21,6 +21,7 @@
                             <td>Submission Date</td>
                             <td>File Path</td>
                             <td>Comments</td>
+                            <td> Download </td>
                         </thead>
                         <tbody>
                             <?php 
@@ -35,6 +36,7 @@
                                     <td><?= $homework['submission_date'] ?></td>
                                     <td><?= $homework['file_path'] ?></td>
                                     <td><?= $homework['comments'] ?></td>
+                                    <td><a href="<?php echo base_url('public/homework/').$homework['file_path'] ?>" Download> Download </a>  </td>
                                 </tr>
                                 <?php 
                             }

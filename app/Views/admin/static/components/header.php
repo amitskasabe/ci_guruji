@@ -59,6 +59,12 @@
           </a>
         </li>
         <li class="sidebar-item">
+          <a class="sidebar-link" href="write-blog">
+            <i class="align-middle" data-feather="edit-2"></i>
+            <span class="align-middle">Write Article</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
           <a class="sidebar-link" href="pages-sign-in.html">
             <i class="align-middle" data-feather="log-in"></i>
             <span class="align-middle">Sign In</span>

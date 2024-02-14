@@ -20,12 +20,19 @@ class AdminController extends Controller
         $userDetail = $session->get('userDetails');
         // $username = "amit";
         // $fname = $userDetail['first_name'];
+
         // $lname = $userDetail['last_name'];
-        $username = "amit";
+   
+        $username = $userDetail;
         if ($username) {
             $isLoggedIn = true;
         }
 
+        if($username == false)
+        {
+            return redirect()->to('admin');
+        }
+        
         return view("admin/static/index", ['firstname' => $username]);
     }
     public function loginpage()

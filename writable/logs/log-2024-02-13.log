@@ -804,3 +804,25 @@ in APPPATH\Controllers\admin\AdminController.php on line 67.
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 18:51:40 --> ErrorException: Array to string conversion
+in APPPATH\Views\admin\static\index.php on line 149.
+ 1 APPPATH\Views\admin\static\index.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\index.php', 149)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/static/index', [], true)
+ 5 APPPATH\Controllers\admin\AdminController.php(36): view('admin/static/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 18:51:55 --> ErrorException: Array to string conversion
+in APPPATH\Views\admin\static\index.php on line 149.
+ 1 APPPATH\Views\admin\static\index.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\index.php', 149)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\server\\htdocs\\guruji-classes\\app\\Views\\admin\\static\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/static/index', [], true)
+ 5 APPPATH\Controllers\admin\AdminController.php(36): view('admin/static/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin\AdminController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
