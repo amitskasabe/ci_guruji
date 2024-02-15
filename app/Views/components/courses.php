@@ -122,7 +122,7 @@
     e.preventDefault();
   })
   english.addEventListener("click", function(e){
-    window.location.href = `https://api.whatsapp.com/send/?phone=+919112203013&text=i%20am%20interested%20in%20this%english%20course&type=phone_number&app_absent=0`;
+    window.location.href = `https://api.whatsapp.com/send/?phone=+919112203013&text=i%20am%20interested%20in%20this%20english%20course&type=phone_number&app_absent=0`;
     e.preventDefault();
   })
 
