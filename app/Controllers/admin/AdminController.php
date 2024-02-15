@@ -33,7 +33,7 @@ class AdminController extends Controller
             return redirect()->to('admin');
         }
         
-        return view("admin/static/students", ['firstname' => $username]);
+        return view("admin/static/index", ['firstname' => $username]);
     }
     public function loginpage()
     {
