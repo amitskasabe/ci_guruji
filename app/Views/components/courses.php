@@ -112,7 +112,7 @@
 <script>
   let science = document.getElementById("science-button");
   let math    =document.getElementById("math-button");
-  let english    =document.getElementById("english-button");
+  let english    =document.getElementById("english-course");
   science.addEventListener("click", function(e){
     window.location.href = `https://api.whatsapp.com/send/?phone=+919112203013&text=i%20am%20interested%20in%20this%20science%20course&type=phone_number&app_absent=0`;
     e.preventDefault();
