@@ -76,7 +76,6 @@
     <a href="about" class="">About</a>
     <a href="blogs" class="">Blogs</a>
     <a href="courses" class="">Courses</a>
-    <a href="careers" class="">Careers</a>
     <?php
     if ($username) {
         ?>
