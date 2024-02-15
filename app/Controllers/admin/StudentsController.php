@@ -4,7 +4,7 @@ namespace App\Controllers\Admin;
 
 use App\Models\admin\AdminModel;
 use App\Models\StudentModel;
-use CodeIgniter\Controller;
+use CodeIgniter\Controller; 
 
 class StudentsController extends Controller
 {
