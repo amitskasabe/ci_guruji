@@ -20,7 +20,7 @@
             </div>
             <div class="mt-3 flex items-center">
               <span class="text-sm font-semibold">
-                  <h1> Mentor : Amit Kasabe ( BE. Computer Scinece )</h1>
+                  <h1> Mentor : Manjushri Nalge M.A.MEd.English ( BE. Computer Scinece )</h1>
               </span>
             </div>
           </div>
@@ -53,7 +53,7 @@
             </div>
             <div class="mt-3 flex items-center">
               <span class="text-sm font-semibold">
-                  <h1> Mentor : Amit Kasabe ( BE. Computer Scinece )</h1>
+                  <h1> Mentor : Manjushri Nalge M.A.MEd.English ( BE. Computer Scinece )</h1>
               </span>
             </div>
           </div>
@@ -89,7 +89,7 @@
             </div>
             <div class="mt-3 flex items-center">
               <span class="text-sm font-semibold">
-                  <h1> Mentor : Amit Kasabe ( BE. Computer Scinece )</h1>
+                  <h1> Mentor : Manjushri Nalge M.A.MEd.English ( BE. Computer Scinece )</h1>
               </span>
             </div>
           </div>
