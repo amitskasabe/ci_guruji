@@ -122,6 +122,7 @@
 </div>
 
 </nav>
+<div class="visme_d" data-title="Guruji" data-url="rx9grjkn-guruji?fullPage=true" data-domain="forms" data-full-page="true" data-min-height="100vh" data-form-id="17214"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
 
 <script>
     // JavaScript to toggle the mobile menu visibility
@@ -136,7 +137,7 @@
             });
         });
     });
-
+  
     
 </script>
 <script>
