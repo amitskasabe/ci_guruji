@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\ContactUsModel;
 use App\Models\HomeworkModel;
 use App\Models\StudentModel;
 use CodeIgniter\Controller;
@@ -124,6 +125,29 @@ class Home extends Controller
         echo view('components/footer');
     }
 
+    public function contact()
+    {
+        echo view('components/header', ['page' => 'Contact']);
+        echo view('pages/contact',);
+        echo view('components/footer');
+    }
+
+    public function contactUs()
+    {
+       $contact = new ContactUsModel();
+       $contactData = [
+        "email" => $this->request->getPost('email'),
+        "subject" => $this->request->getPost('subject'),
+        "message" => $this->request->getPost('message'),
+       ];
+       if($contact->insert($contactData)){
+        return redirect()->to('contact')->with('message','Data Has Been Submitted'); 
+       } else {
+        echo " Something went wrong";
+       }
+
+    }
+    
     public function UploadHomework()
     {
         $homework = new HomeworkModel();
@@ -165,5 +189,17 @@ class Home extends Controller
         }
 
     }
+    public function notes()
+    {
+        echo view('components/header' , ['page' => 'Notes']);
+        echo view('pages/notes');
+        echo view('components/footer');
+    }
 
+    public function gallery()
+    {
+        echo view('components/header' , ['page' => 'Gallery']);
+        echo view('pages/gallery');
+        echo view('components/footer');
+    }
 }

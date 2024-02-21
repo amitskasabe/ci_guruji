@@ -1,0 +1,67 @@
+ERROR - 2024-02-21 09:04:55 --> mysqli_sql_exception: Column 'subject' cannot be null in C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\server\htdocs\guruji-classes\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\server\htdocs\guruji-classes\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\server\htdocs\guruji-classes\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\server\htdocs\guruji-classes\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\server\htdocs\guruji-classes\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\server\htdocs\guruji-classes\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\server\htdocs\guruji-classes\app\Controllers\Home.php(143): CodeIgniter\Model->insert(Array)
+#8 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(941): App\Controllers\Home->contactUs()
+#9 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\server\htdocs\guruji-classes\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\server\htdocs\guruji-classes\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-02-21 09:04:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'subject' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `contact_us` (`email`, `subject`, `message`) VALUES (:email:, :subject:, :message:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Home.php(143): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->contactUs()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-21 09:04:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'subject' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `contact_us` (`email`, `subject`, `message`) VALUES (\'amitkasabeofficial@gmail.com\', NULL, \'test\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `contact_us` (`email`, `subject`, `message`) VALUES (\'amitkasabeofficial@gmail.com\', NULL, \'test\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `contact_us` (`email`, `subject`, `message`) VALUES (:email:, :subject:, :message:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Home.php(143): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->contactUs()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-21 09:04:55 --> [Caused by] mysqli_sql_exception: Column 'subject' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `contact_us` (`email`, `subject`, `message`) VALUES (\'amitkasabeofficial@gmail.com\', NULL, \'test\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `contact_us` (`email`, `subject`, `message`) VALUES (\'amitkasabeofficial@gmail.com\', NULL, \'test\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `contact_us` (`email`, `subject`, `message`) VALUES (\'amitkasabeofficial@gmail.com\', NULL, \'test\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `contact_us` (`email`, `subject`, `message`) VALUES (:email:, :subject:, :message:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(143): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->contactUs()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-21 09:07:05 --> ErrorException: Undefined array key 0
+in APPPATH\Controllers\Home.php on line 104.
+ 1 APPPATH\Controllers\Home.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\server\\htdocs\\guruji-classes\\app\\Controllers\\Home.php', 104)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-21 09:07:17 --> ErrorException: Undefined array key 0
+in APPPATH\Controllers\Home.php on line 104.
+ 1 APPPATH\Controllers\Home.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\server\\htdocs\\guruji-classes\\app\\Controllers\\Home.php', 104)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->profile()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

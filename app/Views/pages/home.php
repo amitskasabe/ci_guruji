@@ -1,6 +1,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/ead722a690.js" crossorigin="anonymous"></script>
 <?php $batch = "07-02-2024" ?>
 <style>
   .d-block, h2{
@@ -205,7 +206,7 @@ input:checked ~ .content-test {
 .content_testimonial-1 .picto {
   height: 100px;
   width: 100px;
-  background-image: url("https://i.postimg.cc/RFBHkG46/diamond-Pest-Logo-small.jpg");
+  background-image: url("https://img.freepik.com/free-vector/realistic-vector-icon-golden-king-queen-crown-isolated-white-background_134830-2012.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -219,7 +220,7 @@ input:checked ~ .content-test {
 .content_testimonial-2 .picto {
   height: 100px;
   width: 100px;
-  background-image: url("https://i.postimg.cc/bsqXXKCV/a-Plus-Handyman-Logo.jpg");
+  background-image: url("https://t3.ftcdn.net/jpg/03/20/35/28/360_F_320352822_Du18cSR0okuxVfYKgQIYYU794iqjQRAU.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -292,7 +293,7 @@ label.label_testimonial-1:before {
   width: 50px;
   height: 50px;
   margin-left: 15px;
-  background-image: url("https://i.postimg.cc/RFBHkG46/diamond-Pest-Logo-small.jpg");
+  background-image: url("https://img.freepik.com/free-vector/realistic-vector-icon-golden-king-queen-crown-isolated-white-background_134830-2012.jpg");
   background-position: center;
   background-size: 75% 75%;
   background-repeat: no-repeat;
@@ -306,7 +307,7 @@ label.label_testimonial-2:before {
   width: 50px;
   height: 50px;
   margin-left: 15px;
-  background-image: url("https://i.postimg.cc/bsqXXKCV/a-Plus-Handyman-Logo.jpg");
+  background-image: url("https://t3.ftcdn.net/jpg/03/20/35/28/360_F_320352822_Du18cSR0okuxVfYKgQIYYU794iqjQRAU.jpg");
   background-position: center;
   background-size: 75% 75%;
   border-radius: 50%;
@@ -433,50 +434,27 @@ p.testimonialFrom {
       <ul class="list">
         <li class="item">
           <input type="radio" id="radio_testimonial-1" name="basic_carousel" checked="checked" />
-          <label class="label_testimonial-1" for="radio_testimonial-1">Diamond Pest Elimination</label>
+          <label class="label_testimonial-1" for="radio_testimonial-1">Who we are </label>
           <div class="content-test content_testimonial-1">
             <span class="picto"></span>
-            <h1>Diamond Pest Elimination</h1>
-            <p>“The team really takes pride in their work. If I didn’t know any better I would think they actually worked for my company.”</p>
-            <p class="testimonialFrom">Bill, Owner</p>
-            <p class="testimonialState">Rochester, NY</p>
+            <h1>The best institute for ssc in our region</h1>
+            <p>“We are just not there to tech your child the basics , but to make their steps strong to stand up with world”</p>
+           
           </div>
         </li>
         <li class="item">
           <input type="radio" id="radio_testimonial-2" name="basic_carousel" />
-          <label class="label_testimonial-2" for="radio_testimonial-2">A+ Handyman Service</label>
+          <label class="label_testimonial-2" for="radio_testimonial-2">How we work</label>
           <div class="content-test content_testimonial-2">
             <span class="picto"></span>
-            <h1>A+ Handyman Service</h1>
-            <p>“Quite simply… the service offers prompt response time to my visitors and helps me to better know what type of project a potential customer wants.”</p>
+            <h1>We teach them with basics to advanced</h1>
+            <p>“You don’t have to be great to start. But you have to start to be great.”</p>
             <p class="testimonialFrom">Bill, Owner</p>
             <p class="testimonialState">Tucson, AZ</p>
             <br>
           </div>
         </li>
-        <li class="item">
-          <input type="radio" id="radio_testimonial-3" name="basic_carousel" />
-          <label class="label_testimonial-3" for="radio_testimonial-3">Mod Movers</label>
-          <div class="content-test content_testimonial-3">
-            <span class="picto"></span>
-            <h1>Mod Movers</h1>
-            <p>“I couldn’t believe it. I actually had to hire someone to help me keep up with the new business. I had no idea my website had so much value.”</p>
-            <p class="testimonialFrom">Marlene, Owner</p>
-            <p class="testimonialState">Monterey, CA</p>
-          </div>
-        </li>
-        <li class="item">
-          <input type="radio" id="radio_testimonial-4" name="basic_carousel" />
-          <label class="label_testimonial-4" for="radio_testimonial-4">AK Pest Control</label>
-          <div class="content-test content_testimonial-4">
-            <span class="picto"></span>
-            <h1>AK Pest Control</h1>
-            <p>Great company to send leads. Very efficient and pleased with the services. We get lots of leads and that whats important. Support is also great from the managers/support. Thanks YPC Chat</p>
-            <p class="testimonialFrom">Mark, Owner</p>
-            <p class="testimonialState">Somerset, VA</p>
-            <br>
-          </div>
-        </li>
+        
       </ul>
     </div>
     <div id="right-zone"></div>

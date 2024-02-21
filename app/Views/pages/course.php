@@ -1,4 +1,7 @@
 <title>
     <?= $courseName ?>
 </title>
+
+
+
 <?= $courseName ?>

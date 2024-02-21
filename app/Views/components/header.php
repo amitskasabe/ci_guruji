@@ -52,10 +52,10 @@
     </title>
 </head>
 <body>
-    <?php 
-    
-    
-    
+    <?php
+
+
+
     ?>
 <nav class="bg-transparent text-dark py-4 px-4 md:px-8 lg:px-16 xl:px-32">
     <div class="flex items-center justify-between">
@@ -73,38 +73,44 @@
 
         <div class="hidden md:flex items-center space-x-5">
     <a href="<?= base_url('/') ?>" class="">Home</a>
-    <a href="about" class="">About</a>
+    <a href="about" class="">About Us</a>
     <a href="blogs" class="">Blogs</a>
     <a href="courses" class="">Courses</a>
+    <a href="contact" class="">Contact Us</a>
+    <a href="gallery">Gallery</a>
+   
     <?php
     if ($username) {
         ?>
-            <div class="hs-dropdown" id="hs-dropdown-custom-trigger">
-        <button type="button" class="hs-dropdown-toggle py-1 ps-1 pe-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50">
-            <img class="w-8 h-auto rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Maria">
-            <span class="text-gray-600 font-medium truncate max-w-[7.5rem]"><?= $username ?></span>
-            <svg class="hs-dropdown-open:rotate-180 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m6 9 6 6 6-6"/>
-            </svg>
-        </button>
+                <div class="hs-dropdown" id="hs-dropdown-custom-trigger">
+            <button type="button" class="hs-dropdown-toggle py-1 ps-1 pe-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50">
+                <img class="w-8 h-auto rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Maria">
+                <span class="text-gray-600 font-medium truncate max-w-[7.5rem]"><?= $username ?></span>
+                <svg class="hs-dropdown-open:rotate-180 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6"/>
+                </svg>
+            </button>
 
-        <div class="hs-dropdown-menu" aria-labelledby="hs-dropdown-custom-trigger">
+            <div class="hs-dropdown-menu" aria-labelledby="hs-dropdown-custom-trigger">
     
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100" href="profile">
-                Profile
-            </a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100" href="logout">
-                Logout
-            </a>
+                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100" href="profile">
+                    Profile
+                </a>
+                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100" href="profile">
+                    Notes
+                </a>
+                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100" href="logout">
+                    Logout
+                </a>
+            </div>
         </div>
-    </div>
 
       
-        <?php
+            <?php
     } else {
         ?>
-            <a href="login" class="">login</a>
-        <?php
+                <a href="login" class="">login</a>
+            <?php
     }
     ?>
     
@@ -122,7 +128,7 @@
 </div>
 
 </nav>
-<div class="visme_d" data-title="Guruji" data-url="rx9grjkn-guruji?fullPage=true" data-domain="forms" data-full-page="true" data-min-height="100vh" data-form-id="17214"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
+
 
 <script>
     // JavaScript to toggle the mobile menu visibility

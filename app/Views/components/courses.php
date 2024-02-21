@@ -29,6 +29,8 @@
             <span class="flex items-center">
               <!-- <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i> 6 Months -->
               <button id="math-button" class="p-3 w-full mr-2  text-white rounded-lg font-semibold mt-2 bg-blue-500"> Enroll Now </button>
+              <br><br>
+              <a href="<?= base_url('public/assets/syllabus/math.pdf') ?>" download id="science-button" class="p-1  text-white rounded-lg font-semibold mt-5 bg-red-500"> Download Syllabus </a>
             </span>  
                   
           </div>
@@ -63,10 +65,11 @@
               <!-- <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i> 6 Months -->
               <button id="english-course" class="p-3 w-full mr-2  text-white rounded-lg font-semibold mt-2 bg-blue-500"> Enroll Now </button>
             </span>  
-                  
+            <a href="<?= base_url('public/assets/syllabus/english.pdf') ?>" download id="science-button" class="p-1  text-white rounded-lg font-semibold mt-5 bg-red-500"> Download Syllabus </a>
           </div>
          
         </a>
+        
         </div>
     </div>
   </div>
@@ -88,6 +91,7 @@
               <span class="text-sm font-semibold">only</span>&nbsp;<span class="font-bold text-xl">19,999</span>&nbsp;<span class="text-sm font-semibold">Rs</span>
             </div>
             <div class="mt-3 flex items-center">
+
               <span class="text-sm font-semibold">
                   <h1> Mentor : Manjushri Nalge M.A.MEd.English </h1>
               </span>
@@ -98,6 +102,10 @@
             <span class="flex items-center">
               <!-- <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i> 6 Months -->
               <button id="science-button" class="p-3 w-full mr-2  text-white rounded-lg font-semibold mt-2 bg-blue-500"> Enroll Now </button>
+            </span>  
+            <span class="flex items-center">
+              <!-- <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i> 6 Months -->
+              <a href="<?= base_url('public/assets/syllabus/science.pdf') ?>" download id="science-button" class="p-3  w-full mr-2  text-white rounded-lg font-semibold mt-5 bg-red-500"> Download Syllabus </a>
             </span>  
                   
           </div>

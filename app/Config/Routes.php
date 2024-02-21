@@ -72,3 +72,8 @@ $routes->get('admin/homework' , 'admin\HomeworkController::ShowHomework');
 $routes->get('admin/admin-logout', 'admin\AdminController::logout');
 // another route
 
+$routes->post('contact' , 'Home::contactUs');
+
+$routes->get('notes' , 'Home::notes');
+
+$routes->get('gallery' , 'Home::gallery');
