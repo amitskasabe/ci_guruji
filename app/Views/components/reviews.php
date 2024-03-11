@@ -16,7 +16,7 @@ $content = [
 
 ?>
 <section id="review" class="">
-  <h1 class="text-center text-2xl uppercase font-semibold mt-5 text-blue-600">How it works </h1>
+  <h1 class="text-center text-2xl uppercase font-semibold mt-5 text-blue-600"> How it works </h1>
   <div class="grid grid-cols-1 md:grid-cols-3 place-items-center mt-5 mb-5">
     <div>
       <div class="max-w-sm rounded overflow-hidden shadow-lg border border-slate-300">
@@ -37,14 +37,14 @@ $content = [
     <div>
       <div class="max-w-sm rounded overflow-hidden shadow-lg border  border-slate-300">
         <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2 text-center"><?php echo $content[0]['heading'] ?> </div>
+          <div class="font-bold text-xl mb-2 text-center"> Take an entrance Exam</div>
           <p class="text-gray-700 text-base text-center">
-           <?php echo $content[0]['subheading'] ?>
+           Just a short exam to verify student will be able to sit in what batch
           </p>
         </div>
         <div class="px-6 py-4">
           <div class="flex justify-center items-center">
-          <?php echo $content[0]['svg'] ?>
+          <i class="fa fa-book text-blue-400 text-7xl"></i>
           </div>
         </div>
       </div>
@@ -54,14 +54,14 @@ $content = [
     <div>
       <div class="max-w-sm rounded overflow-hidden shadow-lg border border-slate-300">
         <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2 text-center"><?php echo $content[0]['heading'] ?> </div>
+          <div class="font-bold text-xl mb-2 text-center">Confirm Admission</div>
           <p class="text-gray-700 text-base text-center">
-           <?php echo $content[0]['subheading'] ?>
+           Confirm your admission , once you are sure , guruji classes will help your child to grow
           </p>
         </div>
         <div class="px-6 py-4">
           <div class="flex justify-center items-center">
-          <?php echo $content[0]['svg'] ?>
+          <i class="fa fa-user  text-7xl text-blue-400"></i>
           </div>
         </div>
       </div>

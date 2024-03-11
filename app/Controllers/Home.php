@@ -22,7 +22,6 @@ class Home extends Controller
         echo view('pages/home');
         echo view('components/courses');
         echo view('components/reviews');
-
         echo view('components/contact');
         echo view('components/footer');
     }

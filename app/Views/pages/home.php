@@ -448,7 +448,7 @@ p.testimonialFrom {
           <div class="content-test content_testimonial-2">
             <span class="picto"></span>
             <h1>We teach them with basics to advanced</h1>
-            <p>“You don’t have to be great to start. But you have to start to be great.”</p>
+            <p>“You don’t have to be great to start. But you have to start to be great.”</p>
             <p class="testimonialFrom">Bill, Owner</p>
             <p class="testimonialState">Tucson, AZ</p>
             <br>
